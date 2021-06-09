@@ -45,6 +45,10 @@ void moteurs(char BOUTONS[12])
 	if ((int)BOUTONS[2] == 1)
 	{
 		 /*A remplir*/
+		 digitalWrite (enablePin, 1);                 
+                 digitalWrite (enablePin2, 1);
+                 digitalWrite(m3, 1);
+                 digitalWrite(m4, 1);
 	}
 
 	/*Pour tourner à droite*/
@@ -70,6 +74,9 @@ void moteurs(char BOUTONS[12])
 	if ((int)BOUTONS[3] == 1)
 	{
         /*A remplir*/
+        digitalWrite(enablePin2, 1);
+        digitalWrite(m2, 1);
+        digitalWrite(m1, 0);
     }
 
 
