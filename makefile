@@ -3,6 +3,7 @@ all : final
 motors : motors_mini
 main : main
 but : but_celebration
+finalmotor : finalmotor
 
 final : motors_mini.o but_celebration.o main.o
 	gcc -o final motors_mini.o but_celebration.o main.o -lcd -lwiringPi
