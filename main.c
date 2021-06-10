@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include <stdio.h>
 #include <stdlib.h>
 #include <wiringPi.h>
@@ -22,7 +21,7 @@ int main (int argc, char ** argv){
 		printf("No joystick found!\n");
 		return 1;
 	}/*Si la joystick n'est pas connectÃ©e afficher un message et quitter le programme*/
-	fclose("/dev/input/js0");//fermer le dossier
+	fclose(fp);//fermer le dossier
 	if (wiringPiSetup () == -1){
 		printf ("error!\n");
 		return (1);
@@ -65,7 +64,7 @@ int main (int argc, char ** argv){
     	{
     		fgets(str, 8, fp);
     		BOUTONS[i] = str[5];
-    		printf("%d", BOUTONS[i])
+    		printf("%d", BOUTONS[i]);
     	}
     	printf("\n");
         /*Une boucle qui rÃ©cupÃ¨re l'Ã©tats des 12 boutons*/        
