@@ -60,13 +60,13 @@ int main (int argc, char ** argv){
         FILE* fp;
     	fp = fopen("/dev/input/js0","r");/*Ouverture du fichier /dev/input/js0*/
     	char str[8];
-    	for(i<0; i<12; i++)
+    	for(i=0; i<12; i++)
     	{
     		fgets(str, 8, fp);
     		BOUTONS[i] = str[5];
     		printf("%d", BOUTONS[i]);
     	}
-    	
+    	printf("\n");
         /*Une boucle qui rÃ©cupÃ¨re l'Ã©tats des 12 boutons*/        
 		if (((int)BOUTONS[0]==1) || ((int)BOUTONS[1]==1) || ((int)BOUTONS[2]==1) || ((int)BOUTONS[3]==1))
         {
