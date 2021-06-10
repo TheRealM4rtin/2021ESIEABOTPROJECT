@@ -6,6 +6,8 @@
 #include "motors_mini.h"
 #include "but_celebration.h"
 
+#define BACKLIGHT_OFF			0
+
 int A = 25;			//GPIO26, entree A du decodeur
 int B = 2;			//GPIO27, entree B du decodeur
 int C = 21;			//GPIO5, entree C du decodeur
@@ -22,15 +24,15 @@ char *team = "Incroyable SILMI";
 int fd = -1;			//valeur de retour de l'initialisation du LCD (-1 si erreur )
 
 void lcd_but(){
-/*
-     À remplir 
-*/
+	char lcd1 = "GOALLLL !"
+	char lcd2 = "1 BUT DE PLUS !"
+	lcdClear(fd);
+	lcdPuts(fd,lcd1);
+	
+	lcdPuts(fd,lcd2);
 }
 
 void lcd_victoire(){
-/*
-     À remplir 
-*/
 }
 
 
