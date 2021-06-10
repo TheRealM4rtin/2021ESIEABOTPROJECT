@@ -9,6 +9,8 @@
 	
 	
 int main (int argc, char ** argv){
+	char *team = "Team ESIEA";
+	int fd = -1;			
 	int i, j;
 	char BOUTON_PRESSE[8], BOUTONS[12]; 
 	int nb_goal = 0;		//compteur de but
