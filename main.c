@@ -77,11 +77,11 @@ int main (int argc, char ** argv){
 		}//else if ((int)BOUTONS[5]==1)
         //{	
     	/* A remplir: si l'utilisateur appuie sur le bouton    correspondant à un but*/
-    		if((int)BOUTONS[1]==1 && (int)BOUTONS[2]==1)
+    		/*if((int)BOUTONS[1]==1 && (int)BOUTONS[2]==1)
     		{
 			int but = 1;
     			lcd_but();
-		}
+		}*/
 		/*A remplir*/
 		fclose(fp);/*Fermeture du fichier /dev/input/js0* Ã  rajouter*/
 	}
