@@ -28,7 +28,7 @@ void lcd_but(){
 	char *lcd2 = "1 BUT DE PLUS !";
 	lcdClear(fd);
 	lcdPuts(fd,lcd1);
-	setCursor(uint8_t, 0, uint8_t, 1);
+	lcdCursor(u_int8_t, 0, u_int8_t, 1);
 	lcdPuts(fd,lcd2);
 }
 
