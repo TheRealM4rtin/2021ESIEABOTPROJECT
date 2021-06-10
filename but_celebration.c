@@ -18,7 +18,7 @@ int D5 = 9;			//GPIO3, pin D5 de l'ecran LCD
 int D6 = 8;			//GPIO2, pin D6 de l'ecran LCD
 int D7 = 12;			//GPIO10, pin D7 de l'ecran LCD
 
-char *team = "Team ESIEA";
+char *team = "Incroyable SILMI";
 int fd = -1;			//valeur de retour de l'initialisation du LCD (-1 si erreur )
 
 void lcd_but(){
