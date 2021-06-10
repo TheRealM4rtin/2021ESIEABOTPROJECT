@@ -59,9 +59,6 @@ int main (int argc, char ** argv){
 	lcdPuts(fd,team);
 	while (1)
     {  
-		lcdClear(fd);			// permet d'effacer le contenu de l'ecran LCD
-		lcdPuts(fd,"team"); 	// on affiche le nom de l'Ã©quipe
-		/*A remplir*/
         FILE* fp;
     	fp = fopen("/dev/input/js0","r");/*Ouverture du fichier /dev/input/js0*/
 
