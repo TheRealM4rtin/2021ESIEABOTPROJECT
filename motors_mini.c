@@ -39,16 +39,30 @@ void moteurs(char BOUTONS[12])
 		sleep(1);
 		printf("                                                 ");
 		printf("\r");
+		sleep(2);
 	}
 
 	/*Pour reculer*/
 	if ((int)BOUTONS[2] == 1)
 	{
 		 /*A remplir*/
-		digitalWrite(enablePin, 1);                 
-        digitalWrite(enablePin2, 1);
-        digitalWrite(m3, 1);
-        digitalWrite(m4, 1);
+		digitalWrite(enablePin, 1);  //active moteur : GPIOC=HIGH
+		digitalWrite(m1, 0);         //GPIOA=HIGH
+		digitalWrite(m2, 0);         //GPIOB=LOW
+
+		//allumage moteur 2 sens positif
+		digitalWrite(enablePin2, 1); //active moteur : GPIOC=HIGH
+		digitalWrite(m3, 1);         //GPIOA=HIGH
+		digitalWrite(m4, 1);         //GPIOB=LOW
+
+		//pause d'une seconde
+		printf("Reculer ! ");
+		printf("\r");
+		fflush(stdout);
+		sleep(1);
+		printf("                                                 ");
+		printf("\r");
+		sleep(2);
 	}
 
 	/*Pour tourner à droite*/
@@ -72,6 +86,7 @@ void moteurs(char BOUTONS[12])
         sleep (1);
         printf("                                                 ");
         printf("\r");
+		sleep(2);
     }
 	/*Pour tourner à gauche*/
 	if ((int)BOUTONS[3] == 1)
@@ -87,12 +102,13 @@ void moteurs(char BOUTONS[12])
         digitalWrite(led_g,1);
         
         //pause d'une seconde
-        printf("Tourner à droite ! ");
+        printf("Tourner à gauche ! ");
         printf("\r");
         fflush(stdout);
         sleep(1);
         printf("                                                 ");
         printf("\r"); 
+		sleep(2);
 
     }
 
