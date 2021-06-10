@@ -67,12 +67,10 @@ int main (int argc, char ** argv){
     	{
 			for(j=0; j < 8; j++){
 				BOUTON_PRESSE[j] = fgetc(fp);
-    			printf("%d", BOUTONS[j]);
 				
 			}
     		BOUTONS[i] = BOUTON_PRESSE[4];
     	}
-    	printf("\n");
         /*Une boucle qui rÃ©cupÃ¨re l'Ã©tats des 12 boutons*/        
 		if (((int)BOUTONS[0]==1) || ((int)BOUTONS[1]==1) || ((int)BOUTONS[2]==1) || ((int)BOUTONS[3]==1))
         {

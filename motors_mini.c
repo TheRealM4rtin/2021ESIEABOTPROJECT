@@ -50,12 +50,12 @@ void moteurs(char BOUTONS[12])
 		 /*A remplir*/
 		digitalWrite(enablePin, 1);  //active moteur : GPIOC=HIGH
 		digitalWrite(m1, 0);         //GPIOA=HIGH
-		digitalWrite(m2, 0);         //GPIOB=LOW
+		digitalWrite(m2, 1);         //GPIOB=LOW
 
 		//allumage moteur 2 sens positif
 		digitalWrite(enablePin2, 1); //active moteur : GPIOC=HIGH
 		digitalWrite(m3, 1);         //GPIOA=HIGH
-		digitalWrite(m4, 1);         //GPIOB=LOW
+		digitalWrite(m4, 0);         //GPIOB=LOW
 
 		//pause d'une seconde
 		printf("Reculer ! ");
@@ -77,8 +77,8 @@ void moteurs(char BOUTONS[12])
         digitalWrite(enablePin2, 1);  //active moteur : GPIOC=HIGH
         digitalWrite(m1, 1);         //GPIOA=HIGH , marche avant moteur gauche
         digitalWrite(m2, 0);         //GPIOB=LOW
-        //digitalWrite(m3, 0);
-        //digitalWrite(m4, 1);         //marche arrière moteur droit
+        digitalWrite(m3, 1);
+        digitalWrite(m4, 0);         //marche arrière moteur droit
         
         //allumage de led droite
 		digitalWrite(led_d,1);
@@ -102,8 +102,8 @@ void moteurs(char BOUTONS[12])
         digitalWrite(enablePin, 1);
         digitalWrite(m1, 0);
         digitalWrite(m2, 1); //marche avant du moteur droit
-        //digitalWrite(m3, 1); //marche arrière du moteur gauche
-        //digitalWrite(m4, 0);
+        digitalWrite(m3, 0); //marche arrière du moteur gauche
+        digitalWrite(m4, 1);
 
         digitalWrite(led_g,1);
         
