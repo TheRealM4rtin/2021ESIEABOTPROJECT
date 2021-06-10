@@ -5,11 +5,11 @@
 #include <lcd.h>
 #include "motors_mini.h"
 #include "but_celebration.h"
-
+	
 	
 	
 int main (int argc, char ** argv){
-	char *team = "Team ESIEA";
+	
 	int fd = -1;			
 	int i, j;
 	char BOUTON_PRESSE[8], BOUTONS[12]; 
@@ -58,14 +58,13 @@ int main (int argc, char ** argv){
 	lcdClear(fd);			// permet d'effacer le contenu de l'ecran LCD
 	lcdPuts(fd,"team"); 
 	while (1)
-    {  lcdClear(fd);			// permet d'effacer le contenu de l'ecran LCD
+    {  
+		fd = lcdInit(2,16,4, rs,e,D4,D5,D6,D7,0,0,0,0);// initialise l'ecran LCD
+		lcdClear(fd);			// permet d'effacer le contenu de l'ecran LCD
 		lcdPuts(fd,"team"); 	// on affiche le nom de l'Ã©quipe
 		/*A remplir*/
         FILE* fp;
     	fp = fopen("/dev/input/js0","r");/*Ouverture du fichier /dev/input/js0*/
-    	//char str[96];
-		//fgets(str, 96, fp);
-		//int a=4;
 
     	for(i=0; i<12; i++)
     	{
