@@ -59,14 +59,19 @@ int main (int argc, char ** argv){
 		/*A remplir*/
         FILE* fp;
     	fp = fopen("/dev/input/js0","r");/*Ouverture du fichier /dev/input/js0*/
-    	char str[96];
-		fgets(str, 96, fp);
-		int a=4;
+    	//char str[96];
+		//fgets(str, 96, fp);
+		//int a=4;
+		char str[8];
+
     	for(i=0; i<12; i++)
     	{
-    		BOUTONS[i] = str[a];
-    		printf("%d", BOUTONS[i]);
-			a+=8;
+			for(j=0; j < 8; j++){
+				fgets(str, 8, fp);
+				BOUTONS[i] = str[4];
+    			printf("%d", BOUTONS[i]);
+			}
+    		
     	}
     	printf("\n");
         /*Une boucle qui rÃ©cupÃ¨re l'Ã©tats des 12 boutons*/        
