@@ -62,16 +62,15 @@ int main (int argc, char ** argv){
     	//char str[96];
 		//fgets(str, 96, fp);
 		//int a=4;
-		char str[8];
 
     	for(i=0; i<12; i++)
     	{
 			for(j=0; j < 8; j++){
-				fgets(str, 8, fp);
-				BOUTONS[i] = str[4];
-    			printf("%d", BOUTONS[i]);
+				BOUTON_PRESSE[j] = fgetc(fp);
+    			printf("%d", BOUTONS[j]);
+				
 			}
-    		
+    		BOUTONS[i] = BOUTON_PRESSE[4];
     	}
     	printf("\n");
         /*Une boucle qui rÃ©cupÃ¨re l'Ã©tats des 12 boutons*/        
