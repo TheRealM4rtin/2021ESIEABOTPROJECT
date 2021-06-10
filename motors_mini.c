@@ -40,6 +40,8 @@ void moteurs(char BOUTONS[12])
 		printf("                                                 ");
 		printf("\r");
 		sleep(2);
+		digitalWrite(enablePin2, 0);
+        digitalWrite(enablePin, 0);
 	}
 
 	/*Pour reculer*/
@@ -63,6 +65,8 @@ void moteurs(char BOUTONS[12])
 		printf("                                                 ");
 		printf("\r");
 		sleep(2);
+		digitalWrite(enablePin2, 0);
+        digitalWrite(enablePin, 0);
 	}
 
 	/*Pour tourner à droite*/
@@ -87,6 +91,8 @@ void moteurs(char BOUTONS[12])
         printf("                                                 ");
         printf("\r");
 		sleep(2);
+		digitalWrite(enablePin2, 0);
+        digitalWrite(enablePin, 0);
     }
 	/*Pour tourner à gauche*/
 	if ((int)BOUTONS[3] == 1)
@@ -109,7 +115,8 @@ void moteurs(char BOUTONS[12])
         printf("                                                 ");
         printf("\r"); 
 		sleep(2);
-
+        digitalWrite(enablePin2, 0);
+        digitalWrite(enablePin, 0);
     }
 
 	//arret du moteur 1
