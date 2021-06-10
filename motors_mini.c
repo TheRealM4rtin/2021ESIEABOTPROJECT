@@ -23,20 +23,20 @@ void moteurs(char BOUTONS[12])
 	if ((int)BOUTONS[0] == 1)
 	{//printf("yes 2\n");
 		//allumage moteur 1 sens positif
-		digitalWrite (enablePin, 1);  //active moteur : GPIOC=HIGH
-		digitalWrite (m1, 1);         //GPIOA=HIGH
-		digitalWrite (m2, 0);         //GPIOB=LOW
+		digitalWrite(enablePin, 1);  //active moteur : GPIOC=HIGH
+		digitalWrite(m1, 1);         //GPIOA=HIGH
+		digitalWrite(m2, 0);         //GPIOB=LOW
 
 		//allumage moteur 2 sens positif
-		digitalWrite (enablePin2, 1); //active moteur : GPIOC=HIGH
-		digitalWrite (m3, 0);         //GPIOA=HIGH
-		digitalWrite (m4, 1);         //GPIOB=LOW
+		digitalWrite(enablePin2, 1); //active moteur : GPIOC=HIGH
+		digitalWrite(m3, 0);         //GPIOA=HIGH
+		digitalWrite(m4, 1);         //GPIOB=LOW
 
 		//pause d'une seconde
-		printf ("Avancer ! ");
+		printf("Avancer ! ");
 		printf("\r");
 		fflush(stdout);
-		sleep (1);
+		sleep(1);
 		printf("                                                 ");
 		printf("\r");
 	}
@@ -45,25 +45,28 @@ void moteurs(char BOUTONS[12])
 	if ((int)BOUTONS[2] == 1)
 	{
 		 /*A remplir*/
-		 digitalWrite (enablePin, 1);                 
-                 digitalWrite (enablePin2, 1);
-                 digitalWrite(m3, 1);
-                 digitalWrite(m4, 1);
+		digitalWrite(enablePin, 1);                 
+        digitalWrite(enablePin2, 1);
+        digitalWrite(m3, 1);
+        digitalWrite(m4, 1);
 	}
 
 	/*Pour tourner à droite*/
 	if ((int)BOUTONS[1] == 1)
 	{
-		//allumage moteur 1 sens positif
-        digitalWrite (enablePin, 1);  //active moteur : GPIOC=HIGH
-        digitalWrite (m1, 1);         //GPIOA=HIGH
-        digitalWrite (m2, 0);         //GPIOB=LOW
+        //allumage moteur 1 sens positif
+        digitalWrite(enablePin, 1);  //active moteur : GPIOC=HIGH
+        digitalWrite(enablePin2, 1);  //active moteur : GPIOC=HIGH
+        digitalWrite(m1, 1);         //GPIOA=HIGH , marche avant moteur gauche
+        digitalWrite(m2, 0);         //GPIOB=LOW
+        digitalWrite(m3, 0);
+        digitalWrite(m4, 1);         //marche arrière moteur droit
         
         //allumage de led droite
-	   digitalWrite(led_d,1);
+		digitalWrite(led_d,1);
 
         //pause d'une seconde
-        printf ("Tourner à droite ! ");
+        printf("Tourner à droite ! ");
         printf("\r");
         fflush(stdout);
         sleep (1);
@@ -75,24 +78,36 @@ void moteurs(char BOUTONS[12])
 	{
         /*A remplir*/
         digitalWrite(enablePin2, 1);
-        digitalWrite(m2, 1);
+        digitalWrite(enablePin, 1);
         digitalWrite(m1, 0);
+        digitalWrite(m2, 1); //marche avant du moteur droit
+        digitalWrite(m3, 1); //marche arrière du moteur gauche
+        digitalWrite(m4, 0);
+
+        digitalWrite(led_g,1);
+        
+        //pause d'une seconde
+        printf("Tourner à droite ! ");
+        printf("\r");
+        fflush(stdout);
+        sleep(1);
+        printf("                                                 ");
+        printf("\r"); 
+
     }
 
-
-
 	//arret du moteur 1
-	digitalWrite (enablePin, 0);
+	digitalWrite(enablePin, 0);
 
 	//arret du moteur 2
-	digitalWrite (enablePin2, 0);
+	digitalWrite(enablePin2, 0);
 	
 
 	//on eteint les led
 	digitalWrite(led_g,0);		//led gauche= LOW
 	digitalWrite(led_d,0);		//led droite= LOW
 
-	printf ("TANK immobile ! ");
+	printf("TANK immobile ! ");
 	printf("\r");
 	fflush(stdout);
 	printf("                                                 ");
