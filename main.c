@@ -56,8 +56,7 @@ int main (int argc, char ** argv){
 	//On initialise l'ecran LCD puis on affiche un message
 	fd = lcdInit(2,16,4, rs,e,D4,D5,D6,D7,0,0,0,0);// initialise l'ecran LCD	
 	lcdClear(fd);			// permet d'effacer le contenu de l'ecran LCD
-	//lcdPuts(fd,"team");
-	lcd.print("team");
+	lcdPuts(fd,team);
 	while (1)
     {  
 		lcdClear(fd);			// permet d'effacer le contenu de l'ecran LCD
