@@ -24,12 +24,13 @@ char *team = "Incroyable SILMI";
 int fd = -1;			//valeur de retour de l'initialisation du LCD (-1 si erreur )
 
 void lcd_but(){
-	char *lcd1 = "GOALLLL !";
+	/*char *lcd1 = "GOALLLL !";
 	char *lcd2 = "1 BUT DE PLUS !";
 	lcdClear(fd);
 	lcdPuts(fd,lcd1);
 	//setCursor(0, 1);
 	lcdPuts(fd,lcd2);
+	*/
 }
 
 void lcd_victoire(){
