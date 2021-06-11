@@ -79,6 +79,7 @@ int main (int argc, char ** argv){
 		
     		if((int)BOUTONS[5] == 1 )
     		{
+			nb_goal =+ 1;
 			celebration(nb_goal);
 		}
 		
