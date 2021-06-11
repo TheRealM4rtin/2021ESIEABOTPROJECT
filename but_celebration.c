@@ -24,30 +24,60 @@ char *team = "Incroyable SILMI";
 int fd = -1;			//valeur de retour de l'initialisation du LCD (-1 si erreur )
 
 void lcd_but(){
-	/*char *lcd1 = "GOALLLL !";
-	char *lcd2 = "1 BUT DE PLUS !";
-	lcdClear(fd);
-	lcdPuts(fd,lcd1);
-	//setCursor(0, 1);
-	lcdPuts(fd,lcd2);
-	*/
+	lcdPosition(lcd, 0, 1);
+	lcdPuts(lcd, "GOGOGOOOAAL !");
 }
 
 void lcd_victoire(){
+	lcdPosition(lcd, 0, 0);
+	lcdPuts(lcd, "VICTOIRE !");
+	lcdPosition(lcd, 0, 1);
+	lcdPuts(lcd, "WELL PLAYED :) ");
 }
 
 
 void aff_7seg_but(int nb_goal){
-/*
-     À remplir */
+	if(nb_goal == 0){
+		digitalWrite(A,0);
+		digitalWrite(B,0);
+		digitalWrite(C,0);
+		digitalWrite(D,0);
+	}
+	if(nb_goal == 1){
+		digitalWrite(A,1);
+		digitalWrite(B,0);
+		digitalWrite(C,0);
+		digitalWrite(D,0);
+	}
+	if(nb_goal == 2){
+		digitalWrite(A,0);
+		digitalWrite(B,1);
+		digitalWrite(C,0);
+		digitalWrite(D,0);
+	}
+	if(nb_goal == 3){
+		digitalWrite(A,1);
+		digitalWrite(B,1);
+		digitalWrite(C,0);
+		digitalWrite(D,0);
+	}
 }
 
 
-void celebration(){
+void celebration(int *nb_goal){
+	int buts = 3;
+	*nb_goal = *nb_goal +1;
+	aff_7seg_but(*nb_goal);
+	lcd_but();
+	if(*nb_goal == 3){
+		lcd_victoire();
+		*nb_goal = 0;
+	}
+	if((*nb_goal) == 0)
+	{
+		aff_7seg_but(*nb_goal);
+	}
 	
-	/*
-     À remplir : à vous d'imaginer un enchainement d'actions sur les moteurs afin de réaliser votre animation !
-     */
 }
 
 
