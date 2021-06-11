@@ -36,25 +36,25 @@ void lcd_victoire(){
 
 
 void aff_7seg_but(int *nb_goal){
-	if(*nb_goal == 0){
+	if( (*nb_goal) == 0){
 		digitalWrite(A,0);
 		digitalWrite(B,0);
 		digitalWrite(C,0);
 		digitalWrite(D,0);
 	}
-	if(*nb_goal == 1){
+	if((*nb_goal) == 1){
 		digitalWrite(A,1);
 		digitalWrite(B,0);
 		digitalWrite(C,0);
 		digitalWrite(D,0);
 	}
-	if(*nb_goal == 2){
+	if( (*nb_goal) == 2){
 		digitalWrite(A,0);
 		digitalWrite(B,1);
 		digitalWrite(C,0);
 		digitalWrite(D,0);
 	}
-	if(*nb_goal == 3){
+	if( (*nb_goal) == 3){
 		digitalWrite(A,1);
 		digitalWrite(B,1);
 		digitalWrite(C,0);
