@@ -58,7 +58,7 @@ void moteurs(char BOUTONS[12])
 		printf("Reculer ! ");
 		printf("\r");
 		fflush(stdout);
-		sleep(1);
+		usleep(10000);
 		printf("                                                 ");
 		printf("\r");
 	}
@@ -81,7 +81,7 @@ void moteurs(char BOUTONS[12])
         printf("Tourner à droite ! ");
         printf("\r");
         fflush(stdout);
-        //sleep (1);
+        usleep(10000);
         printf("                                                 ");
         printf("\r");
     }
@@ -102,7 +102,7 @@ void moteurs(char BOUTONS[12])
         printf("Tourner à gauche ! ");
         printf("\r");
         fflush(stdout);
-        sleep(1);
+        usleep(10000);
         printf("                                                 ");
         printf("\r"); 
     }
