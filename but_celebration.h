@@ -15,7 +15,7 @@ extern int D7;			//GPIO10, pin D7 de l'ecran LCD
 
 extern char *team ;
 extern	int fd ;			//valeur de retour de l'initialisation du LCD 
-extern int but_goal;
+extern int nb_goal;
 
 void lcd_but();
 void lcd_victoire();
