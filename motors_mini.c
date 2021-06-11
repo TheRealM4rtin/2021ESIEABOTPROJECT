@@ -36,7 +36,7 @@ void moteurs(char BOUTONS[12])
 		printf("Avancer ! ");
 		printf("\r");
 		fflush(stdout);
-		sleep(1);
+		usleep(10000);
 		printf("                                                 ");
 		printf("\r");
 	}
