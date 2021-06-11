@@ -79,7 +79,7 @@ int main (int argc, char ** argv){
 		
     		if((int)BOUTONS[5] == 1 )
     		{
-			celebration(nb_goal);
+			celebration(*nb_goal);
 		}
 		
 		fclose(fp);/*Fermeture du fichier /dev/input/js0* Ã  rajouter*/
