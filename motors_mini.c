@@ -81,7 +81,7 @@ void moteurs(char BOUTONS[12])
         printf("Tourner à droite ! ");
         printf("\r");
         fflush(stdout);
-        sleep (1);
+        //sleep (1);
         printf("                                                 ");
         printf("\r");
     }
