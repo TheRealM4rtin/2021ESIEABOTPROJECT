@@ -21,18 +21,18 @@ int D6 = 8;			//GPIO2, pin D6 de l'ecran LCD
 int D7 = 12;			//GPIO10, pin D7 de l'ecran LCD
 
 char *team = "Incroyable SILMI";
-int fd = -1;			//valeur de retour de l'initialisation du LCD (-1 si erreur )
+int fd;			//valeur de retour de l'initialisation du LCD (-1 si erreur )
 
 void lcd_but(){
-	lcdPosition(lcd, 0, 1);
-	lcdPuts(lcd, "GOGOGOOOAAL !");
+	lcdPosition(fd, 0, 1);
+	lcdPuts(fd, "GOGOGOOOAAL !");
 }
 
 void lcd_victoire(){
-	lcdPosition(lcd, 0, 0);
-	lcdPuts(lcd, "VICTOIRE !");
-	lcdPosition(lcd, 0, 1);
-	lcdPuts(lcd, "WELL PLAYED :) ");
+	lcdPosition(fd, 0, 0);
+	lcdPuts(fd, "VICTOIRE !");
+	lcdPosition(fd, 0, 1);
+	lcdPuts(fd, "WELL PLAYED :) ");
 }
 
 
