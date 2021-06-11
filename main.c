@@ -13,7 +13,7 @@ int main (int argc, char ** argv){
 	int fd = -1;			
 	int i, j;
 	char BOUTON_PRESSE[8], BOUTONS[12]; 
-	int nb_goal = 0;		//compteur de but
+	int *nb_goal = 0;		//compteur de but
 	int max_goal = 3;
 	/*A remplir*/ 
     FILE* fp;
@@ -74,8 +74,7 @@ int main (int argc, char ** argv){
 		if (((int)BOUTONS[0]==1) || ((int)BOUTONS[1]==1) || ((int)BOUTONS[2]==1) || ((int)BOUTONS[3]==1))
         {
 			moteurs(BOUTONS);
-		}//else if ((int)BOUTONS[5]==1)
-        //{	
+		}	
     	
 		
     		if((int)BOUTONS[5] == 1 )
