@@ -69,6 +69,7 @@ void celebration(int nb_goal){
 		aff_7seg_but(nb_goal);
 		lcd_but();
 	}
+	nb_goal =+ 1;
 	
 	if(nb_goal == 2){
 		aff_7seg_but(nb_goal);
