@@ -65,7 +65,6 @@ void aff_7seg_but(int nb_goal){
 
 void celebration(int nb_goal){
 	int buts = 3;
-	nb_goal =+ 1;
 	if(nb_goal == 1){
 		aff_7seg_but(nb_goal);
 		lcd_but();
